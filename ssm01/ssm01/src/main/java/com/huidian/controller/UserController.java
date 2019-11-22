@@ -31,4 +31,13 @@ public class UserController {
         }
         return "success";
     }
+	
+	 @RequestMapping("/getNewUser1")
+    public String getNewUser1(){
+        List<User> list=userService.getAll();
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        return "success";
+    }
 }
